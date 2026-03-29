@@ -1,0 +1,42 @@
+
+.header {
+  width: 100%; background: #fff; border-bottom: 1px solid #e0e0e0; position: sticky; top: 0;
+  z-index: 100;
+}
+.topBar {
+  background: #f8f7f5; border-bottom: 1px solid #e0e0e0; padding: 6px 32px; display: flex;
+  align-items: center; justify-content: center; gap: 16px; font-size: 0.625rem;
+  letter-spacing: 0.08em; text-transform: uppercase; color: #666;
+}
+.mainRow {
+  display: flex; align-items: center; justify-content: space-between; padding: 16px 32px;
+}
+.logo {
+  font-size: 1.5rem; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase;
+  padding-left: 18%;
+}
+.logo1 { font-size: 1.5rem; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase;}
+.icons { display: flex; align-items: center; gap: 12px; }
+.lang  { font-size: 0.75rem; font-weight: 700; letter-spacing: 0.08em; }
+.iconBtn {
+  display: flex; align-items: center; justify-content: center; width: 36px; height: 36px;
+  transition: opacity var(--transition);
+}
+.iconBtn:hover { opacity: 0.6; }
+.nav {
+  display: flex; align-items: center; justify-content: center; gap: 48px; padding: 0 32px;
+  border-top: 1px solid #e0e0e0; overflow-x: auto;
+}
+.navLink {
+  display: block; padding: 14px 0; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.12em;
+  text-transform: uppercase; white-space: nowrap; position: relative; }
+.navLink::after { content: ""; position: absolute; bottom: 10px; left: 0;  width: 0; height: 1.5px; 
+  background: #000; transition: width 250ms;}
+.navLink:hover::after { width: 100%; }
+@media (max-width: 900px) { .mainRow, .topBar { padding-left: 16px; padding-right: 16px; }
+  .nav { gap: 24px; justify-content: flex-start; padding: 0 16px; }}
+@media (max-width: 600px) {
+  .logo { font-size: 1.125rem; }
+  .icons { gap: 6px; }
+  .iconBtn { width: 28px; height: 28px; }
+}

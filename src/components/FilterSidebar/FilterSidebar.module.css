@@ -1,0 +1,48 @@
+.sidebar { width: 230px; min-width: 230px;max-width: 230px; flex-shrink: 0;
+    border-right: 1px solid #e0e0e0; padding-bottom: 32px;align-self: stretch;}
+.customRow { padding: 16px 20px; border-bottom: 1px solid #e0e0e0; }
+.toggleLabel { display: flex; align-items: center; gap: 10px; cursor: pointer; user-select: none; }
+.toggleTrack { width: 36px; height: 20px; background: #ccc; border-radius: 10px;
+  position: relative; transition: background 250ms; flex-shrink: 0; }
+.toggleTrack[data-on="true"] { background: #000; }
+.thumb { width: 16px; height: 16px; background: #fff; border-radius: 50%; position: absolute;
+  top: 2px; left: 2px; transition: left 250ms; }
+.toggleTrack[data-on="true"] .thumb { left: 18px; }
+.customText { font-size: 0.75rem; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; }
+.section { border-bottom: 1px solid #e0e0e0; }
+.sectionBtn { width: 100%; display: flex; align-items: center;
+    justify-content: space-between; padding: 16px 20px; text-align: left; transition: background 150ms;}
+.sectionBtn:hover { background: #f9f9f9; }
+.sectionTitle { font-size: 0.75rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; }
+.arrow    { font-size: 1rem; color: #666; display: inline-block; transition: transform 250ms; }
+.arrowUp  { font-size: 1rem; color: #666; display: inline-block; transform: rotate(180deg); 
+    transition: transform 250ms; }
+.options { max-height: 0; overflow: hidden; transition: max-height 300ms ease; }
+.open    { max-height: 400px; }
+
+.unselect {display: block; font-size: 0.7rem; color: #666;
+  text-decoration: underline; padding: 8px 20px 4px; text-align: left;}
+.unselect:hover { color: #000; }
+.optLabel {display: flex; align-items: center; gap: 10px; cursor: pointer; user-select: none; padding: 6px 20px;}
+.check { width: 16px; height: 16px; border: 1.5px solid #aaa;
+  border-radius: 2px; appearance: none; cursor: pointer;  position: relative; flex-shrink: 0;
+  transition: background 150ms, border-color 150ms; }
+.check:checked { background: #000; border-color: #000; }
+.check:checked::after {
+  content: "";
+  position: absolute; left: 4px; top: 1px;
+  width: 5px; height: 9px;
+  border: 1.5px solid #fff; border-top: none; border-left: none;
+  transform: rotate(40deg);
+}
+
+@media (max-width: 900px) {
+  .sidebar {
+    width: 100%;
+    min-width: 100%;
+    max-width: 100%;
+    flex-shrink: 1;
+    border-right: none;
+    border-bottom: 1px solid #e0e0e0;
+  }
+}

@@ -1,0 +1,50 @@
+
+.footer { background: #000; color: #fff; padding: 48px 32px 24px; }
+.newsletter {
+  display: flex; align-items: center;
+  justify-content: space-between;
+  gap: 32px; padding-bottom: 40px; flex-wrap: wrap;
+}
+.nlTitle { font-size: 1rem; font-weight: 600; margin-bottom: 6px; }
+.nlSub   { font-size: 0.8rem; color: #aaa; }
+.form    { display: flex; border: 1px solid #444; flex: 1; max-width: 400px; min-width: 240px; }
+.input   { flex: 1; padding: 11px 14px; background: transparent; border: none; 
+    color: #fff; font-size: 0.8rem; outline: none; }
+.input::placeholder { color: #777; }
+.subBtn  { padding: 11px 18px; background: #fff; color: #000; 
+    font-size: 0.7rem; font-weight: 700; letter-spacing: 0.1em; white-space: nowrap; 
+    transition: background 150ms; }
+.subBtn:hover { background: #e0e0e0; }
+
+.divider { height: 1px; background: #333; margin: 0 0 40px; }
+
+.links { display: grid; grid-template-columns: repeat(4, 1fr); gap: 32px; padding-bottom: 40px; }
+.colTitle { font-size: 0.7rem; font-weight: 700; letter-spacing: 0.12em; 
+    text-transform: uppercase; margin-bottom: 14px; }
+.mt   { margin-top: 20px; }
+.link { display: block; font-size: 0.8rem; color: #aaa; margin-bottom: 10px; transition: color 150ms; }
+.link:hover { color: #fff; }
+
+.social { display: flex; gap: 12px; margin-bottom: 8px; }
+.socialLink {
+  width: 32px; height: 32px; border: 1px solid #444; border-radius: 4px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 0.7rem; font-weight: 700; color: #aaa;
+  transition: color 150ms, border-color 150ms;
+}
+.socialLink:hover { color: #fff; border-color: #fff; }
+
+.payments { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; }
+.badge {
+  width: 34px; height: 22px; background: #222; border-radius: 3px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 0.65rem; font-weight: 700; color: #aaa;
+}
+
+.copy { text-align: center; font-size: 0.75rem; color: #555; }
+
+@media (max-width: 900px) { .links { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 600px) { .footer { padding: 32px 16px 20px; } 
+
+.links { grid-template-columns: 1fr 1fr; gap: 20px; } }
+@media (max-width: 400px) { .links { grid-template-columns: 1fr; } }
