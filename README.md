@@ -1,36 +1,50 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Appscrip Task — Rizwan Sheikh
 
-## Getting Started
+A fully functional **Product Listing Page (PLP)** built with **Next.js 16** using Server Side Rendering (SSR).
 
-First, run the development server:
+## 🔗 Links
+- **Live Site:** [your-netlify-url.netlify.app](#) ← replace after Netlify deploy
+- **GitHub:** https://github.com/Rizwansheik666/appscrip-task-rizwan
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## 🚀 Tech Stack
+- Next.js 16 (App Router)
+- React 18
+- Pure CSS Modules (no Tailwind, no Bootstrap)
+- Fake Store API — https://fakestoreapi.com
+
+## ✅ Features
+- Server Side Rendering (SSR) — products fetched on server
+- Responsive — Mobile, Tablet, Desktop
+- Filter Sidebar with accordion sections
+- Sort dropdown
+- Wishlist toggle on each product
+- SEO — Title, Description, H1/H2 tags, JSON-LD Schema, Alt text
+- Minimal dependencies — only Next.js + React
+
+## 📁 Project Structure
+```
+src/
+├── app/
+│   ├── layout.js        # Root layout + metadata + JSON-LD
+│   ├── page.js          # SSR page — fetches products server side
+│   ├── page.module.css
+│   └── globals.css
+├── components/
+│   ├── Header/
+│   ├── Footer/
+│   ├── FilterSidebar/
+│   ├── SortBar/
+│   ├── ProductCard/
+│   └── ProductGrid/
+└── lib/
+    ├── fetchProducts.js  # API utility
+    └── FilterContext.js  # Shared filter state
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🛠️ Setup
+```bash
+npm install
+npm run dev
+```
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Open http://localhost:3000
